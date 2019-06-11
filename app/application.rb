@@ -24,7 +24,6 @@ class Application
       param = req.params["item"]
      if @@items.include?(param)
        @@cart << param
-       binding.pry
        resp.write "added #{param}"
      else
        resp.write "We don't have that item"
