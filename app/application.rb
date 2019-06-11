@@ -25,7 +25,7 @@ class Application
      if @@items.include?(param)
        @@cart << param
        binding.pry
-       "added #{param}"
+       resp.write "added #{param}"
      else
        resp.write "We don't have that item"
      end
